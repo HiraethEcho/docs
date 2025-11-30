@@ -11,6 +11,8 @@ tags:
 
 My [config](https://github.com/HiraethEcho/nvim) on github.
 
+There is a [site](https://nvim-docs.netlify.app) of my config, for fun.
+
 I'm using nvim as a code editor, mainly for latex and markdown.
 
 ## Usage
