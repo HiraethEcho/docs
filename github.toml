@@ -1,0 +1,147 @@
+baseURL = 'https://hiraethecho.github.io/docs'
+title = 'Docs'
+theme = 'lichtung'
+hasCJKLanguage = true
+# mainSections = ['glade', 'diary']
+enableGitInfo = true
+# defaultContentLanguage= 'zh-cn'
+
+[outputs]
+home = ["HTML", "RSS", "JSON", "CROSSLINKS"]
+[outputFormats.crosslinks]
+mediaType = 'application/json'
+baseName = 'crosslinks'
+isPlainText = true
+notAlternative = true
+weight = 1
+
+[taxonomies]
+tag = 'tags'
+category = 'categories'
+series = 'series'
+topic = "topics"
+
+[params]
+# site info
+subtitle = ''
+description = ''
+author = { name = 'Hiraeth', email = 'wyz2016zxc@outlook.com' }
+# site option
+DateFormat = "2006/01/02"
+ShowFullTextinRSS = true
+math = false
+comment = true
+waline = true
+walineserver = 'https://hexowaline.netlify.app/.netlify/functions/comment'
+twikoo = false
+twikooenvId = 'https://mwikoo.zeabur.app'
+giscus = true
+gcsdata = { repo = "hiraethecho/hiraethecho.github.io", repoid = "R_kgDOJuZ2Uw", category = "General", categoryid = "DIC_kwDOJuZ2U84CyB5i", mapping = "title", position = "top", lang = "zh-CN" }
+LastChangeLink = "https://github.com/hiraethecho/docs/commit"
+# site components
+ShowSearch = true
+SearchPlaceHolder = "Search ↵"
+ShowTaxonomyTree = true
+ShowFileTree = false
+ShowSiteNav = true
+ShowSiteInfo = false
+SiteShowCountWords = true
+SiteShowCountTerms = true
+ShowSiteLink = false
+# section components
+SectionShowCountWords = true
+ShowList = true
+ListType = 'date'            # list date split plain
+ListLimit = ""               # leave empty for unlimit list
+# page components
+ShowToc = true
+ShowRelPost = true
+HugoRelPost = true
+HugoRelPostLimit = 10
+ShowForwardLinks = true
+ShowBackLinks = true
+# Home page
+ShowAllPagesInHome = false
+# archive page
+ShowAllPagesInArchives = true
+# taxonomy page
+PostPerTermLimit = 5
+
+[[params.links]]
+name = 'Home'
+url = 'https://memex.keimal.top/'
+description = ''
+
+[[params.links]]
+name = 'blog'
+url = 'https://memex.keinmal.top'
+description = 'blogs'
+
+[[params.links]]
+name = 'math'
+url = 'https://math.keinmal.top'
+description = 'math note'
+
+[[params.social]]
+name = 'github'
+url = 'https://github.com/hiraethecho'
+icon = 'github'
+
+[[params.social]]
+name = 'mailto'
+url = 'mailto:wyz2016zxc@outlook.com'
+icon = 'mail'
+
+[[params.social]]
+name = 'rss'
+url = '/index.xml'
+icon = 'rss'
+
+[markup]
+[markup.tableOfContents]
+endLevel = 5
+ordered = false
+startLevel = 2
+[markup.goldmark]
+duplicateResourceFiles = false
+[markup.goldmark.extensions]
+definitionList = true
+linkify = true
+linkifyProtocol = 'https'
+strikethrough = false
+table = true
+taskList = true
+[markup.goldmark.extensions.cjk]
+eastAsianLineBreaks = false
+eastAsianLineBreaksStyle = 'simple'
+enable = false
+escapedSpace = false
+[markup.goldmark.extensions.extras]
+[markup.goldmark.extensions.extras.delete]
+enable = true
+[markup.goldmark.extensions.extras.insert]
+enable = true
+[markup.goldmark.extensions.extras.mark]
+enable = true
+[markup.goldmark.extensions.extras.subscript]
+enable = true
+[markup.goldmark.extensions.extras.superscript]
+enable = true
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)']]
+[markup.goldmark.parser]
+[markup.goldmark.parser.attribute]
+block = true
+title = true
+[markup.goldmark.renderHooks]
+[markup.goldmark.renderHooks.image]
+useEmbedded = 'auto'
+[markup.goldmark.renderHooks.link]
+useEmbedded = 'auto'
+[markup.goldmark.renderer]
+hardWraps = false
+unsafe = true
+xhtml = false

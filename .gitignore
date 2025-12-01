@@ -1,0 +1,7 @@
+public
+.hugo_build.lock
+content/.obsidian
+content/.gitignore
+content/.github/
+content/all.base
+content/glade/memo.md

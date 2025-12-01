@@ -1,0 +1,3 @@
+[submodule "themes/lichtung"]
+	path = themes/lichtung
+	url = https://github.com/hiraethecho/lichtung
