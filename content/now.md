@@ -13,12 +13,19 @@ draft: true
 
 现在在做的事
 
-## 2025-11-25
+## docs
 
-改论文  
-似乎有三个感兴趣的话题
+### dev
 
-尝试 cms，content management system
+- [ ] html css js
+- [ ] json yaml toml
+- [ ] lua
+- [>] latex
+- [>] encrypt
+
+### project
+
+hugo theme
 
 ## ref
 
