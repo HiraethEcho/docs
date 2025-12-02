@@ -2,12 +2,13 @@
 title: "文档"
 ShowSearch: true
 ShowList: false
+layout: indexes
 menus:
   side:
     weight: 4
 cascade:
   ShowFiletree: true
-  FileTreeRoot: doc
+  FileTreeRoot: /
 ---
 
 # 文档
