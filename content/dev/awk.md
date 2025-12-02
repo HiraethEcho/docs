@@ -9,7 +9,6 @@ tags:
   - code
 categories: handbook
 ai: true
-CountWords: false
 ---
 
 # awk

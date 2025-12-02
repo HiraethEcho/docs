@@ -13,7 +13,7 @@ math: true
 
 some thing.  
 another line
-a [link](/doc/project/site-plan)
+a [link](/project/site-plan)
 
 ## titles
 

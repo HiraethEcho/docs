@@ -7,7 +7,6 @@ tags:
   - tools
 categories: handbook
 topics: 使用linux
-CountWords: false
 ---
 
 # Linux Handbook

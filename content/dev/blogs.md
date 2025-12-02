@@ -3,10 +3,10 @@ title: 用obsidian管理多个博客
 date: 2025-04-05
 summary: 之前在一个obsidian仓库管理hexo hugo mkdocs三个网站的方法
 tags:
-  - obsidian
-  - github
-  - geek
-  - hack
+    - obsidian
+    - github
+    - geek
+    - hack
 categories: handbook
 ---
 
@@ -34,53 +34,53 @@ categories: handbook
 name: Sync ob/hexo to hexo/source_posts
 
 on:
-  push:
-    paths:
-      - "hexo/**" # 监听文件夹内的文件变化，没有变化不会触发action
+    push:
+        paths:
+            - "hexo/**" # 监听文件夹内的文件变化，没有变化不会触发action
 jobs:
-  sync:
-    runs-on: ubuntu-latest
-    steps:
-      # 检出 obsidian 仓库的代码
-      - name: Checkout blogs repository
-        uses: actions/checkout@v3
-        with:
-          repository: username/obsidian_repo
-          path: obsidian
-      - name: commit
-        run: |
-          cd obsidian
-          git log -1 --pretty=%B > ~/commit
+    sync:
+        runs-on: ubuntu-latest
+        steps:
+            # 检出 obsidian 仓库的代码
+            - name: Checkout blogs repository
+              uses: actions/checkout@v3
+              with:
+                  repository: username/obsidian_repo
+                  path: obsidian
+            - name: commit
+              run: |
+                  cd obsidian
+                  git log -1 --pretty=%B > ~/commit
 
-      # 设置 Git 配置（用户名和ssh私钥）
-      - name: Set up Git
-        env:
-          ACTIONS_KEY: ${{ secrets.OB_PRI }}
-        run: |
-          mkdir -p ~/.ssh/
-          echo "$ACTIONS_KEY" > ~/.ssh/id_rsa
-          chmod 700 ~/.ssh
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.name "action"
-          git config --global user.email "email"
-          git config --global core.quotepath false
-          git config --global i18n.commitEncoding utf-8
-          git config --global i18n.logOutputEncoding utf-8
+            # 设置 Git 配置（用户名和ssh私钥）
+            - name: Set up Git
+              env:
+                  ACTIONS_KEY: ${{ secrets.OB_PRI }}
+              run: |
+                  mkdir -p ~/.ssh/
+                  echo "$ACTIONS_KEY" > ~/.ssh/id_rsa
+                  chmod 700 ~/.ssh
+                  chmod 600 ~/.ssh/id_rsa
+                  ssh-keyscan github.com >> ~/.ssh/known_hosts
+                  git config --global user.name "action"
+                  git config --global user.email "email"
+                  git config --global core.quotepath false
+                  git config --global i18n.commitEncoding utf-8
+                  git config --global i18n.logOutputEncoding utf-8
 
-      - name: clone
-        run: |
-          git clone git@github.com:username/hexo_repo ~/hexo
+            - name: clone
+              run: |
+                  git clone git@github.com:username/hexo_repo ~/hexo
 
-      - name: Sync files from obsidian/hexo to hexo/source/_posts
-        run: |
-          rsync -av obsidian/hexo/ ~/hexo/source/_posts/
-      - name: Commit and push changes to HexoBlog repository
-        run: |
-          cd ~/hexo
-          git add .
-          git commit -m "Sync obsidian to hexo $(cat ~/commit)"
-          git push origin main
+            - name: Sync files from obsidian/hexo to hexo/source/_posts
+              run: |
+                  rsync -av obsidian/hexo/ ~/hexo/source/_posts/
+            - name: Commit and push changes to HexoBlog repository
+              run: |
+                  cd ~/hexo
+                  git add .
+                  git commit -m "Sync obsidian to hexo $(cat ~/commit)"
+                  git push origin main
 ```
 
 注意其中 `username` `hexo_repo` `obsidian_repo` `secrets.OB_PRI`等根据情况改写。

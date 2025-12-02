@@ -6,7 +6,6 @@ tags:
   - tools
   - shell
 categories: handbook
-CountWords: false
 ---
 
 # regex

@@ -44,4 +44,4 @@ categories: log
 
 ## 服务器
 
-于是又在spaceship上买了个虚拟机，很寒酸，fedora 1 vGPU 2GiB memory, 25G ssd. 但是一个月27，搞点简单的小服务也够用。比如[caldav](/doc/dev/caldav)
+于是又在spaceship上买了个虚拟机，很寒酸，fedora 1 vGPU 2GiB memory, 25G ssd. 但是一个月27，搞点简单的小服务也够用。比如[caldav](/dev/caldav)

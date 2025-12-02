@@ -49,7 +49,7 @@ use any cloud drive to sync. I'm using koofr.
 
 ## zotero better notes
 
-用来[导出笔记为markdown](/doc/dev/3in1wiki)
+用来[导出笔记为markdown](/dev/3in1wiki)
 
 **templates:** you can copy these:
 

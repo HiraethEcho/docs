@@ -7,7 +7,6 @@ tags:
   - shell
 categories: handbook
 date: 2025-05-01
-CountWords: false
 ---
 
 # sed

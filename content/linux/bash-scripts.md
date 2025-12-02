@@ -7,7 +7,6 @@ tags:
   - linux
   - code
 categories: handbook
-CountWords: false
 ---
 
 # Bash Scripts

@@ -3,7 +3,6 @@ title: taskwarrior
 date: 2025-06-17
 tags:
   - tools
-CountWords: false
 categories: handbook
 ---
 

@@ -37,7 +37,7 @@ about vim:
 
 展示：
 
-- [导入和展示豆瓣](/doc/software/obsidian_douban)
+- [导入和展示豆瓣](/software/obsidian_douban)
 - dataview (display files by metadata)
 - kanban (plan things, especially something with many stages)不习惯
 
@@ -48,7 +48,7 @@ about vim:
 
 ## sync
 
-因为[用obsidian管理blogs](/doc/dev/blogs)，所以重点是同步obsidian仓库。云端是github和webdav（koofr），在两台电脑（都是win/linux双系统）和手机、ipad，总计6个仓库同步。要注意的是
+因为[用obsidian管理blogs](/dev/blogs)，所以重点是同步obsidian仓库。云端是github和webdav（koofr），在两台电脑（都是win/linux双系统）和手机、ipad，总计6个仓库同步。要注意的是
 
 - 手机和ipad很难用git
 - 设置需要忽略的文件
@@ -57,4 +57,4 @@ about vim:
 
 ## editor
 
-虽然用obsidian管理markdown文件，但编辑器可以用其他的。比如[neovim](/doc/software/nvim-config).
+虽然用obsidian管理markdown文件，但编辑器可以用其他的。比如[neovim](/software/nvim-config).

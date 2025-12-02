@@ -5,7 +5,6 @@ summary: 从archwiki找的一些有用的东西
 tags:
   - archlinux
 categories: handbook
-CountWords: false
 ---
 
 # ArchWiki摘抄

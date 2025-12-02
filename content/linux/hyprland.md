@@ -6,7 +6,6 @@ tags:
   - geek
   - tools
 draft: true
-CountWords: false
 ---
 
 # My hyprland config

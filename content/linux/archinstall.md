@@ -16,7 +16,7 @@ categories: handbook
 
 > [!tip] windows部分
 > 由于windows安装和更新可能会改动efi分区，建议先安装windows，然后再安装archlinux。  
-> 如果需要干净的windows，可以参考[这里](/doc/dev/rewindows)。
+> 如果需要干净的windows，可以参考[这里](/dev/rewindows)。
 
 ## 启动盘
 
@@ -282,4 +282,4 @@ umount /mnt
 reboot
 ```
 
-之后有一些[常见的配置](/doc/linux/archpostinstall)。
+之后有一些[常见的配置](/linux/archpostinstall)。

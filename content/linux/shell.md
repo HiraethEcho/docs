@@ -7,7 +7,6 @@ tags:
 categories: handbook
 status: draft
 ai: true
-CountWords: false
 ---
 
 # shell

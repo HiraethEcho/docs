@@ -6,7 +6,6 @@ tags:
 date: 2025-07-22
 status: in-progress
 categories: handbook
-CountWords: false
 ---
 
 # 概览
@@ -53,7 +52,7 @@ CountWords: false
 | plugin | avante, CodeCompanion | cline, ligma |        |
 | cli    | opencode, goose       |              |        |
 
-nvim的[ai设置](/doc/dev/ai-in-nvim)
+nvim的[ai设置](/dev/ai-in-nvim)
 
 ### Desktop Applications
 
@@ -101,7 +100,7 @@ nvim的[ai设置](/doc/dev/ai-in-nvim)
 - 专用
     - deepseek
     - gemini之类的
-- 本地[ollama](/doc/dev/llm)
+- 本地[ollama](/dev/llm)
 
 ### Capabilities
 

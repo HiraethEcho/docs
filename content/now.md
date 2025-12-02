@@ -2,10 +2,10 @@
 title: Now
 date: 2025-11-25
 summary: 我正在做什么
+HideInFileTree: true
 tags:
-categories: slash
 topics:
-series:
+menus: side
 draft: true
 ---
 
@@ -15,15 +15,22 @@ draft: true
 
 ## docs
 
+要在本站写的
+
 ### dev
 
 - [ ] html css js
 - [ ] json yaml toml
 - [ ] lua
-- [>] latex
-- [>] encrypt
+- [x] latex
 
-### project
+### software
+
+汇总一下在用的软件
+
+## 计划做的项目
+
+math site
 
 hugo theme
 

@@ -15,14 +15,14 @@ categories: handbook
 
 ## start
 
-- [安装](/doc/linux/archinstall)
-- [配置](/doc/linux/archpostinstall)
+- [安装](/linux/archinstall)
+- [配置](/linux/archpostinstall)
 
 ## usage
 
-- [btrfs快照](/doc/linux/btrfs)
+- [btrfs快照](/linux/btrfs)
 
 ## more
 
-- [Arch Wiki的摘抄](/doc/linux/archwiki)
-- [包管理器](/doc/linux/pacman)
+- [Arch Wiki的摘抄](/linux/archwiki)
+- [包管理器](/linux/pacman)

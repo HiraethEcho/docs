@@ -5,7 +5,6 @@ summary: linux下从键盘收到信号后到屏幕上显示字符的过程
 tags:
   - hardware
 status: in-progress
-CountWords: false
 ---
 
 # 从键盘到字符
