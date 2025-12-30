@@ -53,6 +53,8 @@ SectionShowCountWords = false
 ShowList = true
 ListType = 'plain'            # list date split plain
 ListLimit = ""                # leave empty for unlimit list
+ShowCountWordsPerYear = false
+ShowCountWordsPerMonth = false
 # page components
 ShowToc = true
 ShowRelPost = true
