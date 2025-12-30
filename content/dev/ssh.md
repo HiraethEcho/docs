@@ -6,7 +6,7 @@ tags:
   - tools
   - linux
 categories: handbook
-status: "in-progress"
+status: draft
 ---
 
 # ssh

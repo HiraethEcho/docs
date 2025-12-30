@@ -7,7 +7,7 @@ ShowSiteNav: true
 ShowFileTree: true
 ShowSiteLink: true
 ShowToc: false
-menus: side
+menus: main
 ---
 
 # 介绍

@@ -6,7 +6,6 @@ tags:
     - obsidian
     - github
     - geek
-    - hack
 categories: handbook
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: hugo主题glade
+title: hugo主题lichtung
 date: 2025-10-05
 tags:
   - hugo

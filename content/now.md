@@ -5,8 +5,7 @@ summary: 我正在做什么
 HideInFileTree: true
 tags:
 topics:
-menus: side
-draft: true
+menus: main
 ---
 
 # Now

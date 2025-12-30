@@ -7,10 +7,8 @@
     {
       "files": "*.md",
       "options": {
-        "tabWidth": 4,
-        "proseWrap": "preserve",
-        "singleQuote": false,
         "markdown.listItemIndent": "one",
+        "proseWrap": "preserve",
         "embeddedLanguageFormatting": "auto"
       }
     }

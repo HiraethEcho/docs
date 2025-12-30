@@ -6,7 +6,6 @@ tags:
   - site
   - web
   - code
-status: draft
 draft: true
 categories: 规范协议技术
 ai: false

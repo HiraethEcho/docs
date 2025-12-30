@@ -6,6 +6,7 @@ tags:
   - tools
   - shell
 categories: handbook
+ShowContentinRSS: false
 ---
 
 # regex

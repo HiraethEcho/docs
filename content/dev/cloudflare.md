@@ -7,6 +7,7 @@ tags:
   - hack
 categories: handbook
 status: in-progress
+ai: true
 ---
 
 # cloudflare的功能

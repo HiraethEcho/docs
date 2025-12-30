@@ -11,6 +11,16 @@ categories: handbook
 
 ## basic tools
 
+### shell
+
+starship
+
+mtm
+
+tmux
+
+tuios
+
 ### web
 
 [sshfs](https://wiki.archlinuxcn.org/zh/SSHFS): Filesystem client based on SSH.
@@ -59,6 +69,8 @@ so powerful
 ### systemd-manager-tui
 
 [systemd-manager-tui](https://crates.io/crates/systemd-manager-tui)
+
+systemctl-tui
 
 ### aconfmgr
 
@@ -192,24 +204,11 @@ mango
 
 - vdirsyncer
 - khal
+- todoman
 
 ### email
 
 #### aerc
-
-###url
-
-### vcs
-
-#### jujustu
-
-[jj](https://github.com/jj-vcs/jj)
-
-#### avc
-
-[AVC](https://github.com/assembler-0/AVC)
-
-Achieve version control
 
 ### rss
 
@@ -220,6 +219,12 @@ newsboat
 ## useful
 
 ### I'm using these
+
+### power
+
+tlp
+
+power-profiles-daemon
 
 #### github
 
@@ -277,11 +282,6 @@ darkhttpd
       whois -b 8.8.8.8
 ```
 
-#### gitoxide
-
-[github](https://github.com/GitoxideLabs/gitoxide)
-An idiomatic, lean, fast & safe pure Rust implementation of Git
-
 #### [yabsnap](https://wiki.archlinux.org/title/Yabsnap)
 
 another `snapper`
@@ -289,6 +289,10 @@ another `snapper`
 not support fo timeshift btrfs snap yet
 
 ## Interesting
+
+genect
+
+pipes-rs
 
 ### useful
 
@@ -352,6 +356,10 @@ draw things in ascii
 [web app](https://arthursonzogni.com/Diagon/)
 
 ### not now, or not me
+
+#### site
+
+gitmal generate a site from a git repo
 
 #### stew-bin
 
@@ -460,3 +468,16 @@ pacfiles `pacman -F` alternative
 pacman-contrib
 
 [alma-nv](https://github.com/jamesmcm/alma-nv)
+
+## git related
+
+jujustu [jj](https://github.com/jj-vcs/jj)
+
+gitlogue
+
+serie
+
+gitoxide [github](https://github.com/GitoxideLabs/gitoxide)  
+An idiomatic, lean, fast & safe pure Rust implementation of Git
+
+avc [AVC](https://github.com/assembler-0/AVC)

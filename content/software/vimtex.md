@@ -46,6 +46,8 @@ texlive-xetex
 
 除此之外还有`tectonic`等可用，但是难以实现实时预览。
 
+> [!NOTE] 可以用texpresso
+
 ## lsp
 
 `texlab`

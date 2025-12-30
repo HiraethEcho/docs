@@ -1,8 +1,8 @@
 ---
-title: "Docs"
+title: 索引
 ShowList: false
 Layout: indexes
-menu: main
+menus: main
 ---
 
 # 文档
