@@ -27,7 +27,7 @@ description = ''
 author = { name = 'Hiraeth', email = 'wyz2016zxc@outlook.com' }
 # site option
 DateFormat = "2006/01/02"
-ShowFullTextinRSS = true
+ShowContentinRSS = true
 math = false
 comment = true
 waline = true
