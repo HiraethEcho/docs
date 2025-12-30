@@ -3,6 +3,7 @@ title: 我的工具
 date: 2025-12-02
 summary: 我使用的工具
 menus: main
+HideInFileTree: true
 ---
 
 # title: 我的工具

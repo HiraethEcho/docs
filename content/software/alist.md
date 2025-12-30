@@ -4,7 +4,6 @@ date: 2025-06-11
 summary: 搞笑的alist和openlist
 tags:
   - open-source
-  - freedom
 categories: log
 ---
 

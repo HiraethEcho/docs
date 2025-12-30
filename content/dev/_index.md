@@ -1,6 +1,6 @@
 ---
 title: "开发文档"
-menus: main
+menus: side
 ---
 
 # 文档

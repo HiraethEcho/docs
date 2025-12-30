@@ -1,8 +1,9 @@
 ---
-title: 索引
+title: Home
 ShowList: false
+ShowSiteSearch: false
+ShowSearch: true
 Layout: indexes
-menus: main
 ---
 
 # 文档
