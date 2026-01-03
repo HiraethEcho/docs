@@ -27,7 +27,7 @@ description = ''
 author = { name = 'Hiraeth', email = 'wyz2016zxc@outlook.com' }
 # site option
 DateFormat = "2006/01/02"
-ShowContentinRSS = true
+ShowContentinRSS = false
 math = false
 comment = true
 waline = true
@@ -45,11 +45,11 @@ ShowTaxonomyTree = true
 ShowFileTree = true
 ShowSiteNav = true
 ShowSiteInfo = false
-SiteShowCountWords = false
-SiteShowCountTerms = false
+ShowSiteCountWord = false
+ShowSiteCountTerm = false
 ShowSiteLink = false
 # section components
-SectionShowCountWords = false
+ShowSectionCountWord = false
 ShowList = true
 ListType = 'plain'            # list date split plain
 ListLimit = ""                # leave empty for unlimit list
