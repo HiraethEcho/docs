@@ -371,6 +371,8 @@ install binary from github
 
 ### not much useful or unnecessary
 
+[bilibili-tui](https://maredevi.moe/projects/bilibili-tui/) wired
+
 #### gowall
 
 A tool to convert a wallpaper's colorscheme, like nord or onedark
