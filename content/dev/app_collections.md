@@ -220,6 +220,10 @@ newsboat
 
 ### I'm using these
 
+languagetool, hunspell-en_us, texstudio
+
+stacer
+
 ### power
 
 tlp
@@ -293,6 +297,8 @@ not support fo timeshift btrfs snap yet
 genect
 
 pipes-rs
+
+cmd-wrapped
 
 ### useful
 
