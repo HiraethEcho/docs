@@ -4,7 +4,7 @@ date: 2024-12-17
 summary: linux下从键盘收到信号后到屏幕上显示字符的过程
 tags:
   - hardware
-status: in-progress
+status: wip
 ---
 
 # 从键盘到字符
