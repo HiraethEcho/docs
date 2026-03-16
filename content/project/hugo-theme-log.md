@@ -36,3 +36,9 @@ categories: log
 
 基本上开始使用，加了评论、搜索，偶尔调一调样式和bug。  
 以及名称换成了lichtung而不是glade。
+
+## 稳定
+
+2026-03-16 又翻出这个log，发现已经很久没有动主题了，算是稳定了。  
+有闲情逸致的时候写个文档吧。  
+没有文档的[主题仓库](https://github.com/hiraethecho/lichtung)，也不是不能用。
