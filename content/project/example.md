@@ -27,7 +27,7 @@ a [link](/project/site-plan)
 
 ## fonts
 
-**bold text** and _italic text_. and both **_bold and italic_** and _**jlkfas**_
+**bold text** and _italic text_. and both _**bold and italic**_ and _**jlkfas**_
 
 try some thing new: ~~delete~~, ++insert++, ==mark==, superscript^2^ and subscript~2~
 
@@ -79,6 +79,16 @@ and other
 > > nested
 >
 > blocks
+
+it can be fold
+
+> [!NOTE]+ open
+> open as default
+
+and
+
+> [!TIP]- closed
+> closed as default
 
 ### blockquotes
 

@@ -123,7 +123,7 @@ Tips and tricks: Other examples for situations where Xephyr can be useful are:
 - mpv
   - mpvpaper: wallpaper by mpv in wayland
 - [yutto](https://yutto.nyakku.moe/) a bilibili downloader
-- [bilibili-tui](https://maredevi.moe/projects/bilibili-tui/) wired
+- [bilibili-tui](https://maredevi.moe/projects/bilibili-tui/) Weird
 - ffmpeg
 - [ninve](https://github.com/Niedzwiedzw/ninve) A tui video editor. Use `mpv` to play and `ffmpeg` to edit.
 - pic
@@ -210,7 +210,7 @@ Tips and tricks: Other examples for situations where Xephyr can be useful are:
 - [BoxBuddy](https://github.com/Dvlv/BoxBuddyRS) is a gui for `Distrobox`.
 - [tracexec](https://github.com/kxxt/tracexec)
 - surge: tui download manager
-- darkhttpd
+- darkhttpd: a small and secure static web server, when need to host a site locally in a hurry
 - nginx
 - httrack
 - whois
@@ -263,7 +263,6 @@ sshfs -o follow_symlinks username@remote_host:remote_directory mountpoint -p 222
 ```
 
 ## tui
-
 
 ## Interesting
 

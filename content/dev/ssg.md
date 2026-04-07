@@ -16,17 +16,22 @@ draft: true
 
 ## hexo
 
-## jekyll
-
 ## mkdocs
 
 ## others
+
+### jekyll
 
 ### astro
 
 ### eleventy
 
 ### zola
+
+### other others
+
+- [bashblog](https://github.com/cfenollosa/bashblog)
+- [mkws](https://mkws.sh/)
 
 ## host
 
