@@ -30,6 +30,11 @@ DateFormat = "2006/01/02"
 ShowContentinRSS = false
 math = false
 comment = true
+cwd = true
+cwdurl = "https://cwd.keinmal.top"
+cwdpostslug = ""
+cwdsiteid = "docs"
+cwdlang = "auto"
 waline = true
 walineserver = 'https://hexowaline.netlify.app/.netlify/functions/comment'
 twikoo = false
@@ -44,17 +49,19 @@ SearchPlaceHolder = "Search ↵"
 ShowTaxonomyTree = true
 ShowFileTree = true
 ShowSiteNav = true
-ShowSiteInfo = false
-ShowSiteCountWord = false
-ShowSiteCountTerm = false
+ShowSiteInfo = true
+ShowSiteCountWords = true
+ShowSiteCountTerms = true
 ShowSiteLink = false
 # section components
-ShowSectionCountWord = false
+ShowSectionCountWords = false
 ShowList = true
-ListType = 'plain'            # list date split plain
-ListLimit = ""                # leave empty for unlimit list
+ListType = 'list'              # list date split plain
+ListLimit = ""                 # leave empty for unlimit list
 ShowCountWordsPerYear = false
 ShowCountWordsPerMonth = false
+ShowPostsPerYear = false
+ShowPostsPerMonth = false
 # page components
 ShowToc = true
 ShowRelPost = true
@@ -63,7 +70,7 @@ HugoRelPostLimit = 10
 ShowForwardLinks = true
 ShowBackLinks = true
 # Home page
-ShowAllPagesInHome = false
+ShowAllPagesInHome = true
 # archive page
 ShowAllPagesInArchives = true
 # taxonomy page

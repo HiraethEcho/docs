@@ -30,7 +30,12 @@ DateFormat = "2006/01/02"
 ShowFullTextinRSS = true
 math = false
 comment = true
-waline = true
+cwd = true
+cwdurl = "https://cwd.keinmal.top"
+cwdpostslug = ""
+cwdsiteid = "docs"
+cwdlang = "auto"
+waline = false
 walineserver = 'https://hexowaline.netlify.app/.netlify/functions/comment'
 twikoo = false
 twikooenvId = 'https://mwikoo.zeabur.app'
@@ -43,15 +48,19 @@ SearchPlaceHolder = "Search ↵"
 ShowTaxonomyTree = true
 ShowFileTree = true
 ShowSiteNav = true
-ShowSiteInfo = false
-SiteShowCountWords = false
-SiteShowCountTerms = false
-ShowSiteLink = false
+ShowSiteInfo = true
+SiteShowCountWords = true
+SiteShowCountTerms = true
+ShowSiteLink = true
 # section components
-SectionShowCountWords = false
+SectionShowCountWords = true
 ShowList = true
 ListType = 'date'             # list date split plain
 ListLimit = ""                # leave empty for unlimit list
+ShowCountWordsPerYear = true
+ShowCountWordsPerMonth = true
+ShowPostsPerYear = true
+ShowPostsPerMonth = true
 # page components
 ShowToc = true
 ShowRelPost = true
@@ -60,7 +69,7 @@ HugoRelPostLimit = 10
 ShowForwardLinks = true
 ShowBackLinks = true
 # Home page
-ShowAllPagesInHome = false
+ShowAllPagesInHome = true
 # archive page
 ShowAllPagesInArchives = true
 # taxonomy page
@@ -68,7 +77,7 @@ PostPerTermLimit = 5
 
 [[params.links]]
 name = 'Home'
-url = 'https://memex.keimal.top/'
+url = 'https://keimal.top/'
 description = ''
 
 [[params.links]]
