@@ -1,0 +1,443 @@
+---
+draft: true
+---
+
+# Categories and Tags Mapping
+
+This file records the proposed categories and tags for files that currently have empty fields.
+
+- [dev/3in1wiki.md](/dev/3in1wiki.md)
+  - category: handbook
+  - tags:
+    - dev
+    - wiki
+    - collection
+- [dev/ai-in-nvim.md](/dev/ai-in-nvim.md)
+  - category: handbook
+  - tags:
+    - dev
+    - ai
+    - neovim
+    - tutorial
+- [dev/ai-overview.md](/dev/ai-overview.md)
+  - category: handbook
+  - tags:
+    - dev
+    - ai
+    - overview
+- [dev/app_collections.md](/dev/app_collections.md)
+  - category: handbook
+  - tags:
+    - dev
+    - collection
+- [dev/awesome.md](/dev/awesome.md)
+  - category: handbook
+  - tags:
+    - dev
+    - collection
+- [dev/awk.md](/dev/awk.md)
+  - category: handbook
+  - tags:
+    - dev
+    - awk
+    - tutorial
+- [dev/blogs.md](/dev/blogs.md)
+  - category: handbook
+  - tags:
+    - dev
+    - collection
+- [dev/caldav.md](/dev/caldav.md)
+  - category: handbook
+  - tags:
+    - dev
+    - caldav
+    - protocol
+- [dev/cli.md](/dev/cli.md)
+  - category: handbook
+  - tags:
+    - dev
+    - cli
+    - reference
+- [dev/cloudflare.md](/dev/cloudflare.md)
+  - category: handbook
+  - tags:
+    - dev
+    - cloudflare
+    - tutorial
+- [dev/code-lang.md](/dev/code-lang.md)
+  - category: handbook
+  - tags:
+    - dev
+    - reference
+- [dev/css.md](/dev/css.md)
+  - category: handbook
+  - tags:
+    - dev
+    - web
+    - css
+    - tutorial
+- [dev/encrypt.md](/dev/encrypt.md)
+  - category: handbook
+  - tags:
+    - dev
+    - security
+    - reference
+- [dev/git-base.md](/dev/git-base.md)
+  - category: handbook
+  - tags:
+    - dev
+    - git
+    - tutorial
+- [dev/git-tips.md](/dev/git-tips.md)
+  - category: handbook
+  - tags:
+    - dev
+    - git
+    - tips
+- [dev/grep.md](/dev/grep.md)
+  - category: handbook
+  - tags:
+    - dev
+    - grep
+    - reference
+- [dev/html-css-js.md](/dev/html-css-js.md)
+  - category: 规范协议技术
+  - tags:
+    - dev
+    - web
+    - html
+    - css
+    - js
+    - tutorial
+- [dev/html.md](/dev/html.md)
+  - category: handbook
+  - tags:
+    - dev
+    - web
+    - html
+    - tutorial
+- [dev/hugo.md](/dev/hugo.md)
+  - category: handbook
+  - tags:
+    - dev
+    - hugo
+    - tutorial
+- [dev/js.md](/dev/js.md)
+  - category: handbook
+  - tags:
+    - dev
+    - web
+    - js
+    - tutorial
+- [dev/llm.md](/dev/llm.md)
+  - category: handbook
+  - tags:
+    - dev
+    - ai
+    - llm
+- [dev/lua.md](/dev/lua.md)
+  - category: handbook
+  - tags:
+    - dev
+    - lua
+    - tutorial
+- [dev/mysites.md](/dev/mysites.md)
+  - category: handbook
+  - tags:
+    - dev
+    - web
+    - plan
+- [dev/netease.md](/dev/netease.md)
+  - category: handbook
+  - tags:
+    - dev
+    - netease
+    - tutorial
+- [dev/one-liner.md](/dev/one-liner.md)
+  - category: handbook
+  - tags:
+    - dev
+    - cli
+    - tips
+- [dev/opencode.md](/dev/opencode.md)
+  - category: handbook
+  - tags:
+    - dev
+    - opencode
+    - tutorial
+- [dev/pake.md](/dev/pake.md)
+  - category: handbook
+  - tags:
+    - dev
+    - pake
+    - tutorial
+- [dev/regex.md](/dev/regex.md)
+  - category: handbook
+  - tags:
+    - dev
+    - regex
+    - reference
+- [dev/rewindows.md](/dev/rewindows.md)
+  - category: handbook
+  - tags:
+    - dev
+    - windows
+    - migration
+- [dev/scripts-example.md](/dev/scripts-example.md)
+  - category: handbook
+  - tags:
+    - dev
+    - scripting
+    - reference
+- [dev/sed.md](/dev/sed.md)
+  - category: handbook
+  - tags:
+    - dev
+    - sed
+    - reference
+- [dev/ssg.md](/dev/ssg.md)
+  - category: handbook
+  - tags:
+    - dev
+    - ssg
+    - log
+- [dev/ssh.md](/dev/ssh.md)
+  - category: handbook
+  - tags:
+    - dev
+    - ssh
+    - tutorial
+- [dev/sync.md](/dev/sync.md)
+  - category: handbook
+  - tags:
+    - dev
+    - sync
+    - tutorial
+- [linux/archinstall.md](/linux/archinstall.md)
+  - category: handbook
+  - tags:
+    - linux
+    - archlinux
+    - migration
+- [linux/archlinux.md](/linux/archlinux.md)
+  - category: handbook
+  - tags:
+    - linux
+    - archlinux
+    - tutorial
+- [linux/archpostinstall.md](/linux/archpostinstall.md)
+  - category: handbook
+  - tags:
+    - linux
+    - archlinux
+    - config
+- [linux/archwiki.md](/linux/archwiki.md)
+  - category: handbook
+  - tags:
+    - linux
+    - archlinux
+    - reference
+- [linux/bash-scripts.md](/linux/bash-scripts.md)
+  - category: handbook
+  - tags:
+    - linux
+    - bash
+    - tutorial
+- [linux/btrfs.md](/linux/btrfs.md)
+  - category: handbook
+  - tags:
+    - linux
+    - btrfs
+    - tutorial
+- [linux/fhs.md](/linux/fhs.md)
+  - category: handbook
+  - tags:
+    - linux
+    - reference
+- [linux/grub-rescue.md](/linux/grub-rescue.md)
+  - category: handbook
+  - tags:
+    - linux
+    - grub
+    - tutorial
+- [linux/hyprland.md](/linux/hyprland.md)
+  - category: handbook
+  - tags:
+    - linux
+    - hyprland
+    - tutorial
+- [linux/keysym.md](/linux/keysym.md)
+  - category: handbook
+  - tags:
+    - linux
+    - reference
+- [linux/linux-handbook.md](/linux/linux-handbook.md)
+  - category: handbook
+  - tags:
+    - linux
+    - tutorial
+- [linux/niri.md](/linux/niri.md)
+  - category: handbook
+  - tags:
+    - linux
+    - niri
+    - tutorial
+- [linux/no-gui.md](/linux/no-gui.md)
+  - category: handbook
+  - tags:
+    - linux
+    - tutorial
+- [linux/pacman.md](/linux/pacman.md)
+  - category: handbook
+  - tags:
+    - linux
+    - archlinux
+    - reference
+- [linux/sddm.md](/linux/sddm.md)
+  - category: handbook
+  - tags:
+    - linux
+    - sddm
+    - config
+- [linux/seatd.md](/linux/seatd.md)
+  - category: handbook
+  - tags:
+    - linux
+    - seatd
+    - tutorial
+- [linux/shell.md](/linux/shell.md)
+  - category: handbook
+  - tags:
+    - linux
+    - shell
+    - tutorial
+- [linux/universal-package-manager.md](/linux/universal-package-manager.md)
+  - category: handbook
+  - tags:
+    - linux
+    - reference
+- [linux/virtual-machine.md](/linux/virtual-machine.md)
+  - category: handbook
+  - tags:
+    - linux
+    - virtual-machine
+    - tutorial
+- [software/ffmpeg.md](/software/ffmpeg.md)
+  - category: handbook
+  - tags:
+    - ffmpeg
+    - reference
+- [software/latex.md](/software/latex.md)
+  - category: 规范协议技术
+  - tags:
+    - latex
+    - reference
+- [software/latex-trick.md](/software/latex-trick.md)
+  - category: handbook
+  - tags:
+    - latex
+    - tips
+- [software/nvim-config.md](/software/nvim-config.md)
+  - category: handbook
+  - tags:
+    - neovim
+    - config
+- [software/nvim-trick.md](/software/nvim-trick.md)
+  - category: handbook
+  - tags:
+    - neovim
+    - tips
+- [software/obsidian.md](/software/obsidian.md)
+  - category: handbook
+  - tags:
+    - obsidian
+    - tutorial
+- [software/softwares.md](/software/softwares.md)
+  - category: handbook
+  - tags:
+    - collection
+- [software/taskwarrior.md](/software/taskwarrior.md)
+  - category: handbook
+  - tags:
+    - taskwarrior
+    - tutorial
+- [software/timewarrior.md](/software/timewarrior.md)
+  - category: handbook
+  - tags:
+    - timewarrior
+    - tutorial
+- [software/typst.md](/software/typst.md)
+  - category: 规范协议技术
+  - tags:
+    - typst
+    - reference
+- [software/vimtex.md](/software/vimtex.md)
+  - category: handbook
+  - tags:
+    - neovim
+    - vimtex
+    - config
+- [software/zotero.md](/software/zotero.md)
+  - category: handbook
+  - tags:
+    - zotero
+    - tutorial
+- [project/dwm.md](/project/dwm.md)
+  - category: handbook
+  - tags:
+    - dwm
+    - log
+- [project/example.md](/project/example.md)
+  - category: handbook
+  - tags:
+    - project
+    - template
+- [project/hiraeth_com.md](/project/hiraeth_com.md)
+  - category: handbook
+  - tags:
+    - web
+    - log
+- [project/hugo-theme-log.md](/project/hugo-theme-log.md)
+  - category: handbook
+  - tags:
+    - hugo
+    - log
+- [project/keyboard.md](/project/keyboard.md)
+  - category: handbook
+  - tags:
+    - keyboard
+    - log
+- [project/math-note-workflow.md](/project/math-note-workflow.md)
+  - category: handbook
+  - tags:
+    - workflow
+    - log
+- [project/motherfuckerweb.md](/project/motherfuckerweb.md)
+  - category: handbook
+  - tags:
+    - web
+    - log
+- [project/my-domain.md](/project/my-domain.md)
+  - category: handbook
+  - tags:
+    - web
+    - log
+- [project/mysites.md](/project/mysites.md)
+  - category: handbook
+  - tags:
+    - web
+    - plan
+- [project/shit.md](/project/shit.md)
+  - category: handbook
+  - tags:
+    - project
+    - log
+- [project/site-plan.md](/project/site-plan.md)
+  - category: handbook
+  - tags:
+    - web
+    - plan
+- [project/typst-ssg.md](/project/typst-ssg.md)
+  - category: handbook
+  - tags: - typst - log
+  <!-- OMO_INTERNAL_INITIATOR -->

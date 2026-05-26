@@ -125,7 +125,8 @@ Tips and tricks: Other examples for situations where Xephyr can be useful are:
 - [yutto](https://yutto.nyakku.moe/) a bilibili downloader
 - [bilibili-tui](https://maredevi.moe/projects/bilibili-tui/) Weird
 - ffmpeg
-- [ninve](https://github.com/Niedzwiedzw/ninve) A tui video editor. Use `mpv` to play and `ffmpeg` to edit.
+  - [online cli generator](https://ffmpeg.lav.io/)
+  - [ninve](https://github.com/Niedzwiedzw/ninve) A tui video editor. Use `mpv` to play and `ffmpeg` to edit.
 - pic
   - feh
   - flameshot
@@ -134,6 +135,7 @@ Tips and tricks: Other examples for situations where Xephyr can be useful are:
 ## system and kernal
 
 - stacer: trash cleaner, monitor
+- bleachbit: same as above
 - btop: usage monitor
 - btrfs-assistant
 - timeshift
@@ -284,3 +286,9 @@ sshfs -o follow_symlinks username@remote_host:remote_directory mountpoint -p 222
 - [glance](https://github.com/glanceapp/glance)
 - openlist
 - radicale
+
+## new
+
+something I found but have not tried yet
+
+- tylax bidirectional converter between typst and latex

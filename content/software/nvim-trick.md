@@ -94,3 +94,11 @@ return {
 ```lua
 table.insert(opts.ensure_installed, "python")
 ```
+
+## 删除空行
+
+```vim
+:g/^$/d # delete empty line
+:g/^\s*$/d # delete line with only empty char
+:%s/^\s*$//g # clean empty char
+```
