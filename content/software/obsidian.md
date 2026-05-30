@@ -12,6 +12,8 @@ categories: handbook
 
 ## plugins
 
+### 基础
+
 常用：
 
 - remotely save (using webdav to synchronize files)
@@ -40,6 +42,10 @@ about vim:
 - [导入和展示豆瓣](/software/obsidian_douban)
 - dataview (display files by metadata)
 - kanban (plan things, especially something with many stages)不习惯
+
+### Ai
+
+[mcp](https://github.com/dsebastien/obsidian-cli-rest)
 
 ## theme
 
