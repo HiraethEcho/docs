@@ -182,3 +182,7 @@ annotation will be exported as
 
 the color of annotation is coded as `%23<rgb>` in `<data-annotation>`, for
 example blue (#2ea8e5) annotation is `%232ea8e5`
+
+## other
+
+[mcp](https://github.com/cookjohn/zotero-mcp)

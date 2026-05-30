@@ -23,3 +23,5 @@ go
 npm
 
 cargo
+
+bin https://github.com/marcosnils/bin

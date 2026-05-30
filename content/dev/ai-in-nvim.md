@@ -56,6 +56,8 @@ nvim通过[mcphub.nvim](https://github.com/ravitemer/mcphub.nvim)与`mcp-hub`通
 
 ## agent
 
+用ACP协议的通用agent插件 [agentic.nvim](https://github.com/carlos-algms/agentic.nvim) 
+
 ## completion
 
 ### copilot.lua
