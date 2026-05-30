@@ -439,5 +439,7 @@ This file records the proposed categories and tags for files that currently have
     - plan
 - [project/typst-ssg.md](/project/typst-ssg.md)
   - category: handbook
-  - tags: - typst - log
-  <!-- OMO_INTERNAL_INITIATOR -->
+  - tags:
+    - typst
+    - log
+<!-- OMO_INTERNAL_INITIATOR -->
