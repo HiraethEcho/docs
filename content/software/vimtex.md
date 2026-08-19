@@ -10,7 +10,7 @@ tags:
 
 # Write latex with neovim
 
-\(\latex\)
+$\LaTeX$
 
 ## vimtex
 

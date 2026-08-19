@@ -191,6 +191,7 @@ Tips and tricks: Other examples for situations where Xephyr can be useful are:
     - tasknc
     - taskwarriortui
   - todoman
+  - harsh
   - vdirsyncer
   - khal
   - todoman
@@ -201,6 +202,7 @@ Tips and tricks: Other examples for situations where Xephyr can be useful are:
   - jujustu [jj](https://github.com/jj-vcs/jj)
   - gitlogue
   - serie
+  - keifu
   - gitoxide [github](https://github.com/GitoxideLabs/gitoxide) An idiomatic, lean, fast & safe pure Rust implementation of Git
   - avc [AVC](https://github.com/assembler-0/AVC)
   - github-cli
@@ -266,6 +268,9 @@ sshfs -o follow_symlinks username@remote_host:remote_directory mountpoint -p 222
 
 ## tui
 
+- impala: a tui for iwd
+- golazo: football match information
+
 ## Interesting
 
 - genect: 假装很忙的shell操作屏幕保护程序
@@ -277,6 +282,8 @@ sshfs -o follow_symlinks username@remote_host:remote_directory mountpoint -p 222
 - [quarkdown](https://github.com/iamgio/quarkdown) Turn markdown with additional marks to pdf or html, like LaTeX. ![paper](https://raw.githubusercontent.com/iamgio/quarkdown/project-files/images/code-paper.png) ![chart](https://raw.githubusercontent.com/iamgio/quarkdown/project-files/images/code-chart.png)
 - gowall: A tool to convert a wallpaper's colorscheme, like nord or onedark
 - activate-linux a watermark
+- ascii-cam: use ascii to show webcam
+- cmd-wrapped: summarize shell history
 
 ## serves
 

@@ -106,7 +106,7 @@ var2="abc"
 ```
 
 ```bash
-for file in \` ls / etc \`
+for file in ` ls / etc `
 for file in $ (ls / etc)
 
 ```
@@ -157,16 +157,16 @@ my_string="Hello, World!"
 拼接字符串
 
 ```bash
-your\_name = "runoob"
-\# 使用双引号拼接
-greeting = "hello, " $your\_name "!"
-greeting\_1 = "hello, ${your\_name}!"
-echo $greeting $greeting\_1
+your_name = "runoob"
+# 使用双引号拼接
+greeting = "hello, " $your_name "!"
+greeting_1 = "hello, ${your_name}!"
+echo $greeting $greeting_1
 
-\# 使用单引号拼接
-greeting\_2 = 'hello, ' $your\_name '!'
-greeting\_3 = 'hello, ${your\_name}!'
-echo $greeting\_2 $greeting\_3
+# 使用单引号拼接
+greeting_2 = 'hello, ' $your_name '!'
+greeting_3 = 'hello, ${your_name}!'
+echo $greeting_2 $greeting_3
 ```
 
 输出结果为：
@@ -180,7 +180,7 @@ hello, runoob ! hello, ${your_name} !
 
 ```bash
 string = "abcd"
-echo ${#string} \# 输出 4
+echo ${#string} # 输出 4
 ```
 
 ### 数组
@@ -243,12 +243,12 @@ echo ${array_name[@]}
 获取数组长度的方法与获取字符串长度的方法相同，例如：
 
 ```bash
-\# 取得数组元素的个数
-length = ${#array\_name\[@\]}
-\# 或者
-length = ${#array\_name\[\*\]}
-\# 取得数组单个元素的长度
-length = ${#array\_name\[n\]}
+# 取得数组元素的个数
+length = ${#array_name[@]}
+# 或者
+length = ${#array_name[*]}
+# 取得数组单个元素的长度
+length = ${#array_name[n]}
 ```
 
 ### 运算
@@ -261,9 +261,9 @@ Below are the operators supported by bash for mathematical calculations:
 | -------- | -------------- |
 | +        | addition       |
 | \-       | subtraction    |
-| \*       | multiplication |
+| *       | multiplication |
 | /        | division       |
-| \*\*     | exponentiation |
+| **     | exponentiation |
 | %        | modulus        |
 
 Numeric Comparison logical operators
@@ -288,7 +288,7 @@ Comparison is used to check if statements evaluate to `true` or `false`. We can 
 | $1   | 传递给该shell脚本的第一个参数                                         |
 | $2   | 传递给该shell脚本的第二个参数                                         |
 | $@   | 传给脚本的所有参数的列表                                              |
-| $\*  | 以一个单字符串显示所有向脚本传递的参数，与位置变量不同，参数可超过9个 |
+| $*  | 以一个单字符串显示所有向脚本传递的参数，与位置变量不同，参数可超过9个 |
 | $$   | 脚本运行的当前进程ID号                                                |
 | $?   | 显示最后命令的退出状态，0表示没有错误，其他表示有错误                 |
 
@@ -428,7 +428,7 @@ ${var##pattern}
 - 第二种模式： `${variable%%pattern}`，这种模式时，shell在variable中查找，看它是否一给的模式pattern结尾，如果是，就从命令行把variable中的内容去掉右边最长的匹配模式
 - 第三种模式：`${variable#pattern}` 这种模式时，shell在variable中查找，看它是否一给的模式pattern开始，如果是，就从命令行把variable中的内容去掉左边最短的匹配模式
 - 第四种模式： `${variable##pattern}` 这种模式时，shell在variable中查找，看它是否一给的模式pattern结尾，如果是，就从命令行把variable中的内容去掉右边最长的匹配模式
-- 这四种模式中都不会改变variable的值，其中，只有在pattern中使用了\*匹配符号时，%和%%，#和##才有区别。结构中的pattern支持通配符，\*表示零个或多个任意字符，?表示仅与一个任意字符匹配，\[...\]表示匹配中括号里面的字符，\[!...\]表示不匹配中括号里面的字符。
+- 这四种模式中都不会改变variable的值，其中，只有在pattern中使用了*匹配符号时，%和%%，#和##才有区别。结构中的pattern支持通配符，*表示零个或多个任意字符，?表示仅与一个任意字符匹配，[...]表示匹配中括号里面的字符，[!...]表示不匹配中括号里面的字符。
 
 ```
 # var=testcase
@@ -485,8 +485,8 @@ home
 ```
 
 - ${a} 变量a的值, 在不引起歧义的情况下可以省略大括号。
-- $(cmd) 命令替换，和\`cmd\`效果相同，结果为shell命令cmd的输，过某些Shell版本不支持$()形式的命令替换, 如tcsh。
-- $((expression)) 和\`exprexpression\`效果相同, 计算数学表达式exp的数值, 其中exp只要符合C语言的运算规则即可, 甚至三目运算符和逻辑表达式都可以计算。
+- $(cmd) 命令替换，和`cmd`效果相同，结果为shell命令cmd的输，过某些Shell版本不支持$()形式的命令替换, 如tcsh。
+- $((expression)) 和`exprexpression`效果相同, 计算数学表达式exp的数值, 其中exp只要符合C语言的运算规则即可, 甚至三目运算符和逻辑表达式都可以计算。
 
 - 单小括号，(cmd1;cmd2;cmd3) 新开一个子shell顺序执行命令cmd1,cmd2,cmd3, 各命令之间用分号隔开, 最后一个命令后可以没有分号。
 - 单大括号，{ cmd1;cmd2;cmd3;} 在当前shell顺序执行命令cmd1,cmd2,cmd3, 各命令之间用分号隔开, 最后一个命令后必须有分号, 第一条命令和左括号之间必须用空格隔开。
@@ -502,16 +502,16 @@ type [
 
 This means that '[' is actually a program, just like ls and other programs, so it must be surrounded by spaces.
 
-- bash 的内部命令，\[和test是等同的。如果我们不用绝对路径指明，通常我们用的都是bash自带的命令。if/test结构中的左中括号是调用test的命令标识，右中括号是关闭条件判断的。这个命令把它的参数作为比较表达式或者作为文件测试，并且根据比较的结果来返回一个退出状态码。if/test结构中并不是必须右中括号，但是新版的Bash中要求必须这样。
-- Test和\[\]中可用的比较运算符只有==和!=，两者都是用于字符串比较的，不可用于整数比较，整数比较只能使用-eq，-gt这种形式。无论是字符串比较还是整数比较都不支持大于号小于号。如果实在想用，对于字符串比较可以使用转义形式，如果比较"ab"和"bc"：\[ ab \\< bc \]，结果为真，也就是返回状态为0。\[ \]中的逻辑与和逻辑或使用-a 和-o 表示。
+- bash 的内部命令，[和test是等同的。如果我们不用绝对路径指明，通常我们用的都是bash自带的命令。if/test结构中的左中括号是调用test的命令标识，右中括号是关闭条件判断的。这个命令把它的参数作为比较表达式或者作为文件测试，并且根据比较的结果来返回一个退出状态码。if/test结构中并不是必须右中括号，但是新版的Bash中要求必须这样。
+- Test和[]中可用的比较运算符只有==和!=，两者都是用于字符串比较的，不可用于整数比较，整数比较只能使用-eq，-gt这种形式。无论是字符串比较还是整数比较都不支持大于号小于号。如果实在想用，对于字符串比较可以使用转义形式，如果比较"ab"和"bc"：[ ab \\< bc ]，结果为真，也就是返回状态为0。[ ]中的逻辑与和逻辑或使用-a 和-o 表示。
 - 字符范围。用作正则表达式的一部分，描述一个匹配的字符范围。作为test用途的中括号内不能使用正则。
 - 在一个array 结构的上下文中，中括号用来引用数组中每个元素的编号。
 
 ### `[[]]`
 
-- \[\[是 bash 程序语言的关键字。并不是一个命令，\[\[ \]\] 结构比\[ \]结构更加通用。在\[\[和\]\]之间所有的字符都不会发生文件名扩展或者单词分割，但是会发生参数扩展和命令替换。
-- 支持字符串的模式匹配，使用=~操作符时甚至支持shell的正则表达式。字符串比较时可以把右边的作为一个模式，而不仅仅是一个字符串，比如\[\[ hello == hell? \]\]，结果为真。\[\[ \]\] 中匹配字符串或通配符，不需要引号。
-- 使用\[\[... \]\]条件判断结构，而不是\[... \]，能够防止脚本中的许多逻辑错误。比如，&&、||、<和> 操作符能够正常存在于\[\[ \]\]条件判断结构中，但是如果出现在\[ \]结构中的话，会报错。比如可以直接使用if \[\[ $a!= 1 && $a!= 2 \]\], 如果不适用双括号, 则为if \[ $a -ne 1\] && \[ $a!= 2 \]或者if \[ $a -ne 1 -a $a!= 2 \]。
+- [[是 bash 程序语言的关键字。并不是一个命令，[[ ]] 结构比[ ]结构更加通用。在[[和]]之间所有的字符都不会发生文件名扩展或者单词分割，但是会发生参数扩展和命令替换。
+- 支持字符串的模式匹配，使用=~操作符时甚至支持shell的正则表达式。字符串比较时可以把右边的作为一个模式，而不仅仅是一个字符串，比如[[ hello == hell? ]]，结果为真。[[ ]] 中匹配字符串或通配符，不需要引号。
+- 使用[[... ]]条件判断结构，而不是[... ]，能够防止脚本中的许多逻辑错误。比如，&&、||、<和> 操作符能够正常存在于[[ ]]条件判断结构中，但是如果出现在[ ]结构中的话，会报错。比如可以直接使用if [[ $a!= 1 && $a!= 2 ]], 如果不适用双括号, 则为if [ $a -ne 1] && [ $a!= 2 ]或者if [ $a -ne 1 -a $a!= 2 ]。
 - bash把双中括号中的表达式看作一个单独的元素，并返回一个退出状态码。
 
 ```bash
@@ -522,7 +522,7 @@ if [ $a -ne 1] && [ $a != 2 ]
 if [[ $a != 1 && $a != 2 ]]
 
 for i in $(seq 0 4);do echo $i;done
-for i in \`seq 0 4\`;do echo $i;done
+for i in `seq 0 4`;do echo $i;done
 for ((i=0;i<5;i++));do echo $i;done
 for i in {0..4};do echo $i;done
 ```
@@ -674,7 +674,7 @@ for i in {0..4};do echo $i;done
 - 整数扩展。这种扩展计算是整数型的计算，不支持浮点型。((exp))结构扩展并计算一个算术表达式的值，如果表达式的结果为0，那么返回的退出状态码为1，或者 是"假"，而一个非零值的表达式所返回的退出状态码将为0，或者是"true"。若是逻辑判断，表达式exp为真则为1,假则为0。
 - 只要括号中的运算符、表达式符合C语言运算规则，都可用在$((exp))中，甚至是三目运算符。作不同进位(如二进制、八进制、十六进制)运算时，输出结果全都自动转化成了十进制。如：echo $((16#5f)) 结果为95 (16进位转十进制)
 - 单纯用 (( )) 也可重定义变量值，比如 a=5; ((a++)) 可将 $a 重定义为6
-- 常用于算术运算比较，双括号中的变量可以不使用`$`符号前缀。括号内支持多个表达式用逗号分开。 只要括号中的表达式符合C语言运算规则,比如可以直接使用`for((i=0;i<5;i++))`, 如果不使用双括号, 则为`for i in $(seq 0 4)`或者`for i in {0..4}`。再如可以直接使用`if (($i<5))`, 如果不使用双括号, 则为`if \[ $i -lt 5 \]`。
+- 常用于算术运算比较，双括号中的变量可以不使用`$`符号前缀。括号内支持多个表达式用逗号分开。 只要括号中的表达式符合C语言运算规则,比如可以直接使用`for((i=0;i<5;i++))`, 如果不使用双括号, 则为`for i in $(seq 0 4)`或者`for i in {0..4}`。再如可以直接使用`if (($i<5))`, 如果不使用双括号, 则为`if [ $i -lt 5 ]`。
 
 ```bash
 var=$((expression))
@@ -691,7 +691,7 @@ To include it in the bash script, we can enclose it in back ticks.
 ```bash
 #!/bin/bash
 
-var=\`df -h | grep tmpfs\`
+var=`df -h | grep tmpfs`
 echo $var
 ```
 
@@ -723,7 +723,7 @@ repos=(
 | ------------ | ------------------------------ | ------------------------------ |
 | **变量扩展** | ✅（如 `"$var"` 会展开）       | ❌（如 `'$var'` 原样输出）     |
 | **命令替换** | ✅（如 `"$(date)"` 会执行）    | ❌（如 `'$(date)'` 原样输出）  |
-| **转义字符** | 仅 `\`, `$`, `` ` ``, `"` 生效 | 所有字符均按字面处理（无转义） |
+| **转义字符** | 仅 ``, `$`, `` ` ``, `"` 生效 | 所有字符均按字面处理（无转义） |
 | **用途**     | 需保留变量或命令结果时使用     | 需完全按字面输出时使用         |
 
 ```bash
@@ -1421,9 +1421,9 @@ Below are some examples of scheduling cron jobs.
 
 | SCHEDULE       | SCHEDULED VALUE                                           |
 | -------------- | --------------------------------------------------------- |
-| 5 0 \* 8 \*    | At 00:05 in August.                                       |
-| 5 4 \* \* 6    | At 04:05 on Saturday.                                     |
-| 0 22 \* \* 1-5 | At 22:00 on every day-of-week from Monday through Friday. |
+| 5 0 * 8 *    | At 00:05 in August.                                       |
+| 5 4 * * 6    | At 04:05 on Saturday.                                     |
+| 0 22 * * 1-5 | At 22:00 on every day-of-week from Monday through Friday. |
 
 `crontab -l` lists the already scheduled scripts for a particular user.
 

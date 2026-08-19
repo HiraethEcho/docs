@@ -82,3 +82,8 @@ du for btrfs
 ```sh
 sudo btrfs filesystem du -s /home
 ```
+
+```
+latexdiff old.tex new.tex > diff.tex && latexmk -pdf diff.tex 2>&1
+git latexdiff HEAD~
+```

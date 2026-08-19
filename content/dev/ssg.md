@@ -32,6 +32,7 @@ draft: true
 
 - [bashblog](https://github.com/cfenollosa/bashblog)
 - [mkws](https://mkws.sh/)
+- [calepin](https://vincentarelbundock.github.io/calepin/index.html) typst
 
 ## host
 
