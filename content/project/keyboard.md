@@ -7,6 +7,7 @@ categories:
 topics:
 series:
 status: idea
+draft: true
 ---
 
 # 搓一个键盘

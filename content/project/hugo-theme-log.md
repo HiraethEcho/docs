@@ -32,6 +32,9 @@ categories: log
 开始无休止的微调。
 ![](https://asset.877675.xyz/7.webp)
 
+> [!NOTE] 2026-08-23
+> 补充说明一下，这个阶段古法使用 AI, 在网页端和 deepseek 提问，艰难学习 go template.
+
 ## 实装
 
 基本上开始使用，加了评论、搜索，偶尔调一调样式和bug。  
@@ -42,3 +45,8 @@ categories: log
 2026-03-16 又翻出这个log，发现已经很久没有动主题了，算是稳定了。  
 有闲情逸致的时候写个文档吧。  
 没有文档的[主题仓库](https://github.com/hiraethecho/lichtung)，也不是不能用。
+
+## AI
+
+7月用 AI 搞了下文档。  
+8月用 AI 检查了一遍，优化了一点代码。加了个很喜欢的 CSS 样式，侧边栏现在用类似 `tree` 的方式展示文件层级。

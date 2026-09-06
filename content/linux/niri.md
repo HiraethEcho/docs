@@ -54,4 +54,4 @@ topics: 使用linux
 ## dot
 
 我的具体配置可以参考我的[dot仓库](https://github.com/hiraethecho/dotfiles)，使用stow管理。  
-niri相关的文件在`wm/.config/niri`，rofi相关的配置（没有整理）在`tools/.config/rofi`和`bin/.local/bin/`
+niri相关的文件在`niri/.config/niri`，rofi相关的配置在`rofi/`

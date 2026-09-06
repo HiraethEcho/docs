@@ -87,3 +87,31 @@ sudo btrfs filesystem du -s /home
 latexdiff old.tex new.tex > diff.tex && latexmk -pdf diff.tex 2>&1
 git latexdiff HEAD~
 ```
+
+show camera using mpv
+
+```sh
+v4l2-ctl --list-devices # find device
+mpv --untimed --no-demuxer-thread av://v4l2:/dev/video0
+```
+
+### pdf
+
+tun pdf to standard a4 paper. `--scale 0.7` is optional
+
+```sh
+pdfjam input.pdf --scale 0.7 --paper a4paper --outfile output.pdf
+```
+
+将pdf变成 booklet 形式，折叠后得到A5大小的小册子
+
+```sh
+pdfbook2 --paper=a4paper input.pdf
+```
+
+合并 (need `poppler`)
+```
+pdfjam file1.pdf file2.pdf --paper a4paper --outfile output.pdf
+# need `poppler`
+pdfunite file.pd file2.pdf file3.pdf output.pdf
+```

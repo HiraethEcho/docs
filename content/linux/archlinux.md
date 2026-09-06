@@ -2,6 +2,7 @@
 title: Archlinux从安装到配置
 date: 2025-01-04
 summary: 关于archlinux的一个汇总
+series: archlinux
 tags:
   - archlinux
   - geek

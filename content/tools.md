@@ -10,223 +10,62 @@ HideInFileTree: true
 
 ## On My Archlinux
 
-我使用archlinux发行版，在X11下使用dwm，在wayland下使用niri。常用st, kitty, foot 作为terminal。编辑器是neovim，偶尔使用zed。  
-或者可以这样展示 `:r! pacman -Qqe`
+I use arch, btw
 
-> [!NOTE]- pacman -Qqe
-> 7zip
-> accountsservice
-> aconfmgr-git
-> acpi
-> acpilight
-> aerc
-> alsa-utils
-> amd-ucode
-> archlinuxcn-keyring
-> atuin
-> autossh
-> awesome-terminal-fonts
-> base
-> base-devel
-> bash-language-server
-> bat
-> bc
-> bluetui
-> bluez-tools
-> bluez-utils
-> brightnessctl
-> btop
-> btrfs-assistant
-> btrfs-progs
-> buku
-> bun
-> cava
-> clang
-> cliphist
-> cloudflared
-> cups
-> ddcutil
-> deepseek-pake
-> dhcpcd
-> dmenu
-> dms-shell-bin
-> dua-cli
-> dunst
-> efibootmgr
-> emmylua-ls-bin
-> eza
-> fastfetch
-> fbterm
-> fcitx5
-> fcitx5-chinese-addons
-> fcitx5-configtool
-> fcitx5-gtk
-> fcitx5-pinyin-zhwiki
-> fcitx5-qt
-> fd
-> feh
-> ffmpeg4.4
-> flameshot
-> flomo-pake
-> foot
-> fzf
-> fzf-tab-git
-> git
-> github-cli
-> github-copilot
-> gnome-keyring
-> gparted
-> grub
-> grub-btrfs
-> gvfs
-> gvfs-dnssd
-> harper
-> hugo
-> imagemagick
-> impala
-> iw
-> iwd
-> kdlfmt
-> keifu-bin
-> keyd
-> khal
-> kitty
-> koofr-desktop-bin
-> lazygit
-> less
-> lib32-mesa
-> lib32-vulkan-radeon
-> libnotify
-> librepods
-> libxml2-legacy
-> libzip
-> linux
-> linux-firmware-amdgpu
-> linux-firmware-atheros
-> linux-firmware-other
-> linux-headers
-> linux-wifi-hotspot
-> lua-language-server
-> maim
-> marksman
-> mate-polkit
-> mcat-bin
-> mpc
-> mpd
-> mpv
-> mupdf
-> ncmpcpp
-> neovim
-> net-tools
-> newsboat
-> niri
-> noctalia-shell
-> nodejs
-> noto-fonts-emoji
-> npm
-> ntfs-3g
-> obsidian
-> openssh
-> os-prober
-> otf-codenewroman-nerd
-> otf-maplemono
-> pacman-contrib
-> pamixer
-> paru
-> pavucontrol-gtk3
-> pcmanfm
-> picgo
-> pipewire
-> pipewire-alsa
-> pipewire-audio
-> pipewire-pulse
-> power-profiles-daemon
-> python-pynvim
-> qbittorrent
-> rar
-> rclone
-> rime-emoji
-> ripgrep
-> rmpc
-> rocm-smi-lib
-> rofi
-> shellcheck-bin
-> shfmt
-> sioyek
-> snapper
-> stacer
-> starship
-> stow
-> stylua
-> sudo
-> sx
-> taplo-cli
-> task
-> tealdeer
-> tex-fmt
-> texlab
-> texlive-bibtexextra
-> texlive-binextra
-> texlive-langchinese
-> texlive-latexextra
-> texlive-mathscience
-> texlive-pstricks
-> texlive-xetex
-> timeshift
-> tinymist
-> todoman
-> tree-sitter
-> ttf-daddytime-mono-nerd
-> ttf-ibm-plex
-> ttf-lxgw-wenkai-mono
-> ttf-monaco-nerd-font-git
-> ttf-nerd-fonts-symbols-mono
-> typst
-> ufrii-print
-> unzip
-> uv
-> vdirsyncer
-> vscode-css-languageserver
-> vulkan-radeon
-> waterfox-bin
-> watt-toolkit-bin
-> websocat
-> wechat-bin
-> wemeet-bin
-> weread-pake
-> wget
-> wiremix
-> wireplumber
-> wl-clipboard
-> wlsunset
-> xbindkeys
-> xclip
-> xdg-desktop-portal
-> xdg-ninja-git
-> xdg-user-dirs-gtk
-> xdotool
-> xf86-video-amdgpu
-> xhidecursor
-> xorg-server
-> xorg-server-xephyr
-> xorg-xhost
-> xorg-xinit
-> xorg-xinput
-> xorg-xsetroot
-> xorg-xwayland
-> xwayland-satellite
-> yay
-> yazi
-> yutto
-> zathura
-> zathura-djvu
-> zathura-pdf-mupdf
-> zip
-> zotero
-> zoxide
-> zram-generator
-> zsh
-> zsh-autosuggestions
-> zsh-fast-syntax-highlighting
+### DE
+
+X11:
+
+- dwm
+- dwmblocks
+- st
+- dmenu
+- tabbed
+
+I have those intalled as a bundle called `suckmore` (because it sucks a little bit more than origin suckless) though a PKGBUILD. it pull my repo [suckless](https://github.com/hiraethecho/suckless), complie them, and install into `/usr/bin`.  
+My dwm inits `~/.config/dwm/autostart.sh` at startup, in which i start `dwmblock`, `xbindkeys`, `dunst`, `fcitx5`, `feh` for wallpaper, `xhidecusor` so hide cursor while typing. [^1]
+
+[^1]: it works on my mechine
+
+Wayland:
+
+- niri
+- noctalia
+- foot
+- niri-ocr, niri-pimg
+
+I use following softwares as componets of both DE:
+
+- display manager: ly use sx-starx for X11
+- terminal: kitty
+- network: iwd, impala (tui) also i use systemd to solve dns directly
+- sound: pipewire, wiremix (tui) and pavucontrol-gtk3 (gui)
+- light: brightnessctl, ddcutil for external monitor
+- bluetooth: bluez, bluetui
+- app lanucher: rofi
+- file manger: yazi (tui), pcmanfm (gui)
+- editor: neovim
+- browser: zen (for now)
+- notifier: dunst
+
+### softwares
+
+- rss: [markerss](https://github.com/hiraethecho/markerss) vibe coding app
+- document: only office
+- pdf: sioyek, zathura
+- obsidian
+- btop
+- piclist
+- zotero
+- marktext
+- fcitx
+- flameshot
+- gparted
+- rclone, koofr
 
 ## Dev
+
+- herdr
+- pi
+- opencode
+- neovim

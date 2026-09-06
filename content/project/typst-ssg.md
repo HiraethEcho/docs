@@ -33,7 +33,7 @@ status: idea
 
 ### 实现
 
-用rust。但bin文件。调用typst，可选依赖。  
+用rust。单bin文件。调用typst，可选依赖。  
 学习git的开发，先做mvp。
 
 ### 细节
@@ -46,7 +46,8 @@ status: idea
 ## Log
 
 - 2026-03-17: 先调查一下，创建这个文档。
-- 2026-03-18: 发现typst生成html暂时是用svg，还在开发mathml的部分。先学其他的。
+- 2026-03-18: 发现typst生成html暂时是用svg，还在开发mathml的部分。先学其他的。 (update: 8月左右支持 mathml 了)
+- 2026-08-23: baudelaire 几乎完美，用 <code> ```typst eval </code> 来支持 markdown 里使用 typst。有一个缺点，是不支持 markdown 直接使用 html语法。
 
 ## ref
 

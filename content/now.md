@@ -18,10 +18,7 @@ menus: main
 
 ### dev
 
-- [ ] html css js
-- [ ] json yaml toml
-- [ ] lua
-- [x] latex
+- node/
 
 ### software
 
@@ -31,7 +28,7 @@ menus: main
 
 math site
 
-hugo theme
+- [X] hugo theme
 
 ## ref
 

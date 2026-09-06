@@ -14,6 +14,4 @@ status:
 
 https://www.docx-editor.dev/
 
-ai 相关[汇总](/dev/ai-tools)
-
 操作系统教学代码 2000行 https://github.com/yhzhang0128/egos-2000

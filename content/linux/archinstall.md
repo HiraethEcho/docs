@@ -6,6 +6,7 @@ tags:
   - archlinux
   - geek
 categories: handbook
+series: archlinux
 ---
 
 # Basic installation of arch linux

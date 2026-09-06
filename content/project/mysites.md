@@ -12,16 +12,6 @@ categories: plan
 想要建站，各种方式建了很多站，试了很多技术功能。  
 截至 2025-08-29前 汇总一下。
 
-## 服务器上的
-
-在starship上的服务器跑的服务，用zero trust-network-tunnel的方式绑定到877675.xyz域名下的子域名。
-
-- [memos](https://memos.877675.xyz) 一个类似flomo的轻量级笔记服务
-- [blinko](https://blinko.877675.xyz) 一个结合AI的memo服务
-- ~~[copilot-api](https://copilot.877675.xyz)~~ 把github的copilot加上OpenAI的接口。找不到怎么加密，先关掉了。项目的[github](https://github.com/ericc-ch/copilot-api)有本地部署方法。
-- [openlist](https://openlist.877675.xyz) 网盘合集
-- [caldav](https://cal.877675.xyz) 用radicale做的日历和联系人服务
-
 ## 一些赛博善人
 
 ### netlify

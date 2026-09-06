@@ -2,6 +2,7 @@
 title: 安装后的建议配置
 date: 2024-11-18
 summary: archlinux安装后的建议配置，新建用户，软件等
+series: archlinux
 tags:
   - archlinux
   - geek
