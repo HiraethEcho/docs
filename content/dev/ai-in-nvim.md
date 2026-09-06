@@ -6,7 +6,6 @@ tags:
   - nvim
   - ai
   - geek
-draft: true
 ---
 
 # AI in neovim

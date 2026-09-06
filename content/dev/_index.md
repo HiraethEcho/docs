@@ -1,6 +1,7 @@
 ---
 title: "开发文档"
-menus: side
+cascade:
+  FileTreeRoot: dev
 ---
 
 # 文档
