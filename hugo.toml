@@ -2,9 +2,8 @@ baseURL = 'https://docs.keinmal.top/'
 title = 'Docs'
 theme = 'lichtung'
 hasCJKLanguage = true
-# mainSections = ['glade', 'diary']
 enableGitInfo = true
-# defaultContentLanguage= 'zh-cn'
+defaultContentLanguage= 'zh-cn'
 
 [outputs]
 home = ["HTML", "RSS", "JSON", "CROSSLINKS"]
@@ -30,12 +29,12 @@ DateFormat = "2006/01/02"
 ShowContentinRSS = false
 math = false
 comment = true
-cwd = true
+cwd = false
 cwdurl = "https://cwd.keinmal.top"
 cwdpostslug = ""
 cwdsiteid = "docs"
 cwdlang = "auto"
-waline = true
+waline = false
 walineserver = 'https://hexowaline.netlify.app/.netlify/functions/comment'
 twikoo = false
 twikooenvId = "https://mwikoo.zeabur.app"
@@ -47,16 +46,19 @@ LastChangeLink = "https://github.com/hiraethecho/docs/commit"
 ShowSiteSearch = true
 SearchPlaceHolder = "Search ↵"
 ShowTaxonomyTree = true
-ShowFileTree = true
-ShowSiteNav = true
-ShowSiteInfo = true
+ShowFileTree = false
+ShowSiteNav = false
+ShowSiteInfo = false
 ShowSiteCountWords = true
 ShowSiteCountTerms = true
 ShowSiteLink = false
 # section components
+ShowHeatMap = true
 ShowSectionCountWords = false
+ShowSubSection = true
 ShowList = true
-ListType = 'list'              # list date split plain
+ListStyle = 'list'             # list date split (legacy ListType -> ListStyle)
+ListRecursive = false          # false: list only direct pages; true: RegularPagesRecursive
 ListLimit = ""                 # leave empty for unlimit list
 ShowCountWordsPerYear = false
 ShowCountWordsPerMonth = false
@@ -70,26 +72,25 @@ HugoRelPostLimit = 10
 ShowForwardLinks = true
 ShowBackLinks = true
 # Home page
-ShowAllPagesInHome = true
+ShowAllPagesInHome = false
 # archive page
 ShowAllPagesInArchives = true
 # taxonomy page
 PostPerTermLimit = 5
+# indexes page
+ShowTaxonomyTermCount = false
+# searchoption
+fuseOpts = { limit = 5, threshold = 0.1 }
 
 [[params.links]]
-name = 'old doc'
-url = 'https://hiraethecho.github.io/wiki/'
-description = 'by mkdocs'
+name = 'Home'
+url = 'https://keimal.top/'
+description = 'Home Page'
 
 [[params.links]]
-name = 'blog'
-url = 'https://memex.keinmal.top'
-description = 'My blog'
-
-[[params.links]]
-name = 'math'
-url = 'https://math.keinmal.top'
-description = 'math note'
+name = 'cs'
+url = 'https://memex.keinmal.top/garden/cs'
+description = 'My essays'
 
 [[params.social]]
 name = 'github'

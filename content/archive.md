@@ -4,6 +4,6 @@ Layout: archive
 HideInFileTree: true
 ShowSiteNav: true
 ShowFileTree: true
-ListType: date
+ListStyle: date
 menus: main
 ---

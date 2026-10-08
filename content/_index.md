@@ -2,11 +2,13 @@
 title: Home
 ShowList: false
 ShowSiteSearch: false
+cascade:
+  FileTreeRoot: /
+  ShowFileTree: true
 ShowSearch: true
 Layout: indexes
 ---
 
-# 文档
+这里主要是我自己项目的文档和笔记合集。一般性的[计算机科学知识](https://memex.keinmal.top/garden/cs)在另一个[站点](https://memex.keinmal.top)。
 
-技术文档，各种计算机相关知识。包括[linux](/linux)([btw](/linux/archlinux))和[各类软件](/software)的使用，一些积攒的[开发知识](/dev)，一些[项目](/project)的记录。  
-有一些是为自己查阅的[使用手册](/categories/handbook)，还有一些关于某些技术的[规范协议](/categories/规范协议技术)。
+旧版技术文档可以在 Github Pages 版[站点](https://hiraethecho.github.io/docs)找到。
