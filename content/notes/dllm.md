@@ -1,4 +1,17 @@
-# Diffusion Language Model (DLM)
+---
+title: DLM 基本概念和思考
+date: 2026-10-13
+summary:
+tags:
+categories:
+topics:
+series:
+genres:
+draft: true
+status:
+---
+
+# DLM 基本概念和思考
 
 Diffusion Language Models (DLMs) are a class of generative models that leverage diffusion processes to generate high-quality data samples, such as images, audio, and text. Unlike traditional autoregressive models, DLMs iteratively refine random noise into coherent outputs through a series of denoising steps.
 
