@@ -13,7 +13,7 @@ status:
 
 # 以 Pi 为例的 Agent 分析
 
-> 对应 pi 1.2.0（`pi-coding-agent` / `pi-agent-core` / `pi-ai` 均为 1.2.0）。
+> 对应 pi 1.2.0
 
 ## 1. 组件
 
@@ -503,6 +503,47 @@ summary 挂在**新位置**（`branchWithSummary(newLeafId, ...)`），不挂在
 `branch_summary` 的内容由 `collectEntriesForBranchSummary()` 收集：找 old leaf 与 new leaf 的最近公共祖先，从 old leaf 往回走到该祖先，按 token 预算取消息（新的优先），再让 LLM 生成结构化 summary（Goal / Constraints & Preferences / Progress / Key Decisions / Next Steps）。
 
 对比 compaction：同格式，但 compaction 作用在当前分支内部（`/compact` 或超过 `contextWindow - reserveTokens` 时自动），`branch_summary` 作用在跨分支导航时。
+
+#### 摘要以什么成分进入对话历史
+
+**user 角色。**
+
+`branchSummary` 是 pi 自己的消息类型，不是 LLM 角色。`convertToLlm()` 把它转成 `user` 消息：
+
+```
+{ role: "user", content: [{ type: "text", text: BRANCH_SUMMARY_PREFIX + summary + BRANCH_SUMMARY_SUFFIX }] }
+```
+
+实际文本：
+
+```
+The following is a summary of a branch that this conversation came back from:
+
+<summary>
+…摘要正文…
+</summary>
+```
+
+对比 `compactionSummary`，也是转成 `user`，前缀不同：
+
+```
+The conversation history before this point was compacted into the following summary:
+
+<summary>
+…摘要正文…
+</summary>
+```
+
+| 消息类型 | 转成 | 前缀 |
+|---|---|---|
+| `branchSummary` | `user` | `The following is a summary of a branch that this conversation came back from:` |
+| `compactionSummary` | `user` | `The conversation history before this point was compacted into the following summary:` |
+| `custom`（extension 发的） | `user` | 无 |
+| `bashExecution` | `user` | 无，附命令与 exit code 文本；`excludeFromContext` 时整条跳过 |
+
+模型看到的是「用户告诉我另一条分支上做过什么」，不是自己说过的话。
+
+摘要 entry 在 session 文件里是 `branch_summary` 类型，`fromId` 记录从哪个 leaf 离开。
 
 ### LLM 看到什么
 

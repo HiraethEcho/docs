@@ -1,0 +1,179 @@
+---
+title: 模型训练伪代码示例
+date: 2026-10-15
+summary:
+tags:
+categories:
+topics:
+series:
+genres:
+draft: true
+status:
+---
+
+# 模型训练伪代码示例
+
+删掉一切与循环逻辑无关的东西：配置加载、数据集构建、tokenizer、设备选择、
+早停、进度条、验收测试、量化导出。
+
+## 假设已就绪的输入
+
+本文不关心它们从哪来
+```
+model 待训练的模型，参数 requires_grad=True
+train_loader 训练集 DataLoader，每次产出 (xb, yb) 一个 micro-batch
+val_loader 验证集 DataLoader
+opt 优化器（AdamW），持有 model.parameters()
+sched 学习率调度器
+loss_fn 交叉熵损失，ignore_index 指向 padding 位置
+total_steps 训练总优化步数
+bs 等效批大小（梯度累积之后）
+mb micro-batch 大小（单次前向吃进的样本数）
+eval_interval 每多少优化步做一次验证
+save_dir 检查点保存目录
+```
+
+## 训练前：状态初始化
+
+```py
+step = 0        # 已经完成多少次「参数更新」。不是样本数，也不是 epoch 数
+accum = 0       # 当前已经累积了几个 micro-batch 的梯度
+model.train()   # 切训练模式：dropout 生效，BatchNorm 用当前批统计量
+
+ # 凑够一个等效批，需要做多少次 micro-batch 的前向+反向。
+ # 例：bs=32, mb=8 → 每 4 次 micro-batch 才更新一次参数。
+steps_per_update = bs // mb
+```
+
+## 外层循环：按「优化步数」驱动，不按 epoch 驱动
+
+```py
+while step < total_steps:
+    # 一轮 while 体 = 把整个训练集走一遍（一个 epoch）。
+    # loader 耗尽 → for 自然结束 → 回到这一行重新判断条件。
+    #
+    # 为什么用 while 而不是 for epoch in range(n_epochs)？
+    # 因为终止条件是「步数」，不是「轮数」。max_steps 通常远小于一个 epoch
+    # 的步数，所以 while 常常只跑 1 轮就退出。
+
+    for xb, yb in train_loader:
+        # 每次取出一个 micro-batch：xb 是输入 id，yb 是预测目标 id
+
+        # ------------------------------------------------------------------
+        # 2.1 前向传播
+        # ------------------------------------------------------------------
+        logits, _ = model(xb)
+        # 模型输出每个位置对词表的打分。第二项是可选缓存，训练时用不上。
+
+        loss = loss_fn(logits.view(-1, logits.size(-1)), yb.view(-1))
+        # 把 [batch, seq, vocab] 拉平成 [batch*seq, vocab]，
+        # 把 [batch, seq] 拉平成 [batch*seq]，算平均交叉熵。
+        # 得到一个标量 loss —— 反向传播必须从标量出发。
+
+        # ------------------------------------------------------------------
+        # 2.2 反向传播
+        # ------------------------------------------------------------------
+        loss.backward()
+        # autograd 沿前向时记录的计算图反向遍历，逐算子套链式法则，
+        # 把梯度累加到每个参数的 .grad 上。
+        #
+        # 关键：是「累加」，不是「覆盖」。所以这里不能清零，
+        # 否则梯度累积就失效了。
+
+        accum += 1
+        # 记下：又攒了一个 micro-batch 的梯度进来。
+
+        # ------------------------------------------------------------------
+        # 2.3 判断：梯度攒够一个等效批了吗
+        # ------------------------------------------------------------------
+        if accum == steps_per_update:
+            # 走到这里时，param.grad 里装的是 bs 条样本的梯度总和。
+            # 这就是「用 mb 的显存，换 bs 的批大小」的做法。
+
+            clip_grad_norm_(model.parameters(), 1.0)
+            # 把全体参数的梯度当作一个向量，若模长超过 1.0 就整体等比缩小。
+            # 作用：防止个别 batch 梯度爆炸，把参数带飞。
+            # 必须放在 step() 之前，裁剪的是「即将用于更新的梯度」。
+
+            opt.step()
+            # 真正修改参数：w ← w - lr * grad（AdamW 还有动量与权重衰减）。
+            # 到这一行，参数才发生变化。
+
+            opt.zero_grad()
+            # 清空 .grad，为下一轮累积腾地方。
+            # 少了这一步，梯度会跨更新无限叠加。
+
+            sched.step()
+            # 学习率前进一步（预热 + 余弦退火，按优化步计）。
+
+            step += 1
+            # 优化步数 +1。这是 while 条件的判据。
+
+            accum = 0
+            # 梯度计数器归零，开始攒下一个等效批。
+
+            # --------------------------------------------------------------
+            # 2.4 记录日志
+            # --------------------------------------------------------------
+            train_losses.append(loss.item())
+            # 注意：这里记的是「最后一个 micro-batch」的 loss，不是整批平均。
+            # .item() 把张量转成 Python 浮点数，避免持有一整张计算图。
+
+            # --------------------------------------------------------------
+            # 2.5 定期验证
+            # --------------------------------------------------------------
+            if step % eval_interval == 0:
+                eval_loss = evaluate(model, val_loader, loss_fn)
+                # 见文末 evaluate 的伪代码：切 eval 模式、禁用梯度、跑验证集。
+
+                val_losses.append(eval_loss)
+                save_ckpt("last.pt")
+                # 每评估一次存一份，保证训练中断也能拿到最新参数。
+
+        # ------------------------------------------------------------------
+        # 2.6 及时跳出当前 epoch
+        # ------------------------------------------------------------------
+        if step >= total_steps:
+            break
+        # 步数达标就立刻离开 for，不把这轮 epoch 跑完。
+        # 若等到 for 自然结束才检查，会多跑掉最多一个 epoch 的数据。
+```
+
+## 收尾
+
+```
+save_ckpt("last.pt")   # 再存一次，覆盖掉两次评估之间的尾部进展
+```
+
+打印总用时、最佳验证损失；把 loss 历史落盘或画曲线。
+
+## Misc
+
+本文略去的子过程伪代码
+
+```py
+
+ def evaluate(model, val_loader, loss_fn):
+     model.eval()                     # 关 dropout，BatchNorm 用滑动统计量
+     total = 0
+     with torch.no_grad():            # 不建计算图，省显存也更快
+         for xb, yb in val_loader:
+             logits, _ = model(xb)
+             total += loss_fn(...).item()
+     model.train()                    # 记得切回训练模式
+     return total / len(val_loader)
+
+ def save_ckpt(name):
+     torch.save({"model": model.state_dict(), ...}, save_dir + "/" + name)
+     # 只存参数（state_dict），不存模型结构
+```
+
+三条容易踩的规律
+
+1.  顺序铁律：backward → clip → step → zero_grad。
+    zero_grad 若挪到 backward 之前，等效批被拆成 mb 大小，累积白做。
+2.  accum 不跨 epoch 重置。
+    若一个 epoch 的 micro-batch 数不能被 steps_per_update 整除，
+    残余部分会带进下一轮。累积链是连续的，但步边界跨了 epoch。
+3.  while 的退出只有两条路：step 达标，或内层 break 后回到条件判断。
+    早停若引入，也只是置一个标志位，同样要等内层 break 把控制权交回来。

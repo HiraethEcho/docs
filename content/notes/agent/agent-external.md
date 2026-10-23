@@ -1,5 +1,5 @@
 ---
-title: Agent 的外部能力
+title: 非Agent原生的外部能力
 date: 2026-10-13
 summary: skills、MCP、extensions 三类外部扩展，含 Pi 的实现方式
 tags: 
@@ -7,15 +7,14 @@ categories:
 topics: 
 series: 
 genres: 
-draft: true
 status: 
 ---
 
-# Agent 的外部能力
+# AGENT之外的能力
 
-> 对应 pi 1.2.0。
+AGENT 提供接口，调用外部工具的能力
 
-## 1. Skills
+## Skills
 
 skill 是一个目录，含 `SKILL.md` 与附属文件。`SKILL.md` 以 frontmatter 开头，后接指令正文。
 
@@ -53,9 +52,8 @@ Agent Skills 规范定义的 frontmatter 字段：
 | 命令发现 | `enableSkillCommands` 设置控制 skill 命令是否出现在 interactive 的命令发现里；手输的 `/skill:name` 仍可用 |
 | 校验 | malformed `SKILL.md` 与缺 `description` 的 skill 不加载；重名保留先发现的并给 warning |
 | 命名限制 | name 用小写字母、数字、连字符，无首尾或连续连字符，最多 64 字符；description 最多 1024 字符 |
-| 信任 | `.pi/skills` 受 project trust 保护 |
 
-## 2. MCP
+## MCP
 
 MCP 是 client / server 协议。agent 作 client 连 server，得到两类能力：tools 与 resources。
 
@@ -67,6 +65,8 @@ MCP 是 client / server 协议。agent 作 client 连 server，得到两类能�
 legacy SSE transport 不支持。
 
 ### Pi 的实现
+
+`1.0.0` 内置 MCP 了。
 
 #### 配置
 
@@ -152,11 +152,9 @@ codemode 脚本拿到完整的 `CallToolResult`，含 `content`、`structuredCon
 - 关闭内置支持：`--no-mcp`（单次）、`pi config` 里禁用 built-in `mcp`、或 settings 写 `"extensions": ["-builtin:mcp"]`。
 - extension 可注册 server：`pi.registerMcpServer(name, config)` / `pi.unregisterMcpServer(name)`。extension 加载期间注册的随 session 启动一起连，之后注册的立即连。`mcp.json` 里同名条目优先。
 
-## 3. Extensions
+## Extensions
 
-extension 是宿主进程内的 module，导出默认工厂函数。工厂拿到一个 API 对象，用它注册能力并订阅事件。
-
-四类可分发资源的分工：extension 加行为，skill 加按需指令，prompt template 加可复用消息文本，theme 加终端配色。
+插件系统，不同 agent 有不同实现方式。
 
 ### Pi 的实现
 

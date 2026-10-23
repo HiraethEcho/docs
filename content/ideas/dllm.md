@@ -7,13 +7,20 @@ categories:
 topics:
 series:
 genres:
-draft: true
 status:
 ---
 
 # DLM 基本概念和思考
 
 Diffusion Language Models (DLMs) are a class of generative models that leverage diffusion processes to generate high-quality data samples, such as images, audio, and text. Unlike traditional autoregressive models, DLMs iteratively refine random noise into coherent outputs through a series of denoising steps.
+
+比起Autoregressive Language Model， 我认为 Diffusion Language Model（DLM）更正确。
+
+维特根斯坦的「家族相似」概念和 DLM 中往词语向量加高斯噪声的思路有所呼应。
+
+## Questions
+
+比起位置编码的Transformer，DLM需要位置真的是位置，才能从中间生成文本。
 
 连续的 词嵌入空间
 
@@ -49,3 +56,5 @@ General 应该指「一个」能力，一个「形式的」而非「具体的」
 
 或者更简洁通俗地，有先天认知能力，和后天综合实践和学习能力。
 后天学习的能力，必然与先天能力有区分，从实现方式和存储方式上。（也许RAG是一个不成熟的尝试）
+
+see [more](https://keinmal.top/posts/agi)

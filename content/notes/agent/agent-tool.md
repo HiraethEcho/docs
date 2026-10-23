@@ -1,7 +1,7 @@
 ---
 title: Tool 设计
 date: 2026-10-13
-summary: agent 的工具设计，含契约、执行生命周期、edit 的 diff 机制
+summary: agent 的工具设计
 tags: 
 categories: 
 topics: 
@@ -12,6 +12,8 @@ status:
 ---
 
 # Tool 设计
+
+AGENT 原生为模型提供的工具
 
 ## 以 Pi 为例
 

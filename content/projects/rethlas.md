@@ -16,7 +16,6 @@ description: 自然语言数学推理系统——fork 自 frenzymath/Rethlas 并
 ## 安装
 
 ```sh
-npm install -g @openai/codex
 uv venv && uv pip install -r generation/mcp/requirements.txt
 cd verification && uv venv && uv pip install -r requirements.txt && uv run uvicorn api.server:app --port 8091
 ```
@@ -35,7 +34,7 @@ cd verification && uv venv && uv pip install -r requirements.txt && uv run uvico
 ./hugo.sh          # 或 ./site/serve.sh
 ```
 
-站点由 Hugo 或 Zola（MATbook）构建，端口 3264。
+站点由 Hugo 构建，端口 3264。
 
 ## 目录结构
 
