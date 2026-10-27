@@ -27,7 +27,6 @@ author = { name = 'Hiraeth', email = 'wyz2016zxc@outlook.com' }
 # site option
 DateFormat = "2006/01/02"
 ShowContentinRSS = false
-math = false
 comment = true
 cwd = false
 cwdurl = "https://cwd.keinmal.top"
@@ -44,14 +43,17 @@ gcsdata = { repo = "hiraethecho/hiraethecho.github.io", repoid = "R_kgDOJuZ2Uw",
 LastChangeLink = "https://github.com/hiraethecho/docs/commit"
 # site components
 ShowSiteSearch = true
+SearchContent = true
 SearchPlaceHolder = "Search ↵"
 ShowTaxonomyTree = true
 ShowFileTree = false
+ShowPostsinFileTree = false    # filetree: list direct posts of each section (per-_index override)
+ShowDeeperinFileTree = true    # filetree: false = stop at this level (no subsections, no posts)
 ShowSiteNav = false
 ShowSiteInfo = false
 ShowSiteCountWords = true
 ShowSiteCountTerms = true
-ShowSiteLink = false
+ShowSiteLink = true
 # section components
 ShowHeatMap = true
 ShowSectionCountWords = false
@@ -68,7 +70,7 @@ ShowPostsPerMonth = false
 ShowToc = true
 ShowRelPost = true
 HugoRelPost = true
-HugoRelPostLimit = 10
+HugoRelPostLimit = 5
 ShowForwardLinks = true
 ShowBackLinks = true
 # Home page

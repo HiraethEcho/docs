@@ -28,7 +28,6 @@ author = { name = 'Hiraeth', email = 'wyz2016zxc@outlook.com' }
 # site option
 DateFormat = "2006/01/02"
 ShowFullTextinRSS = true
-math = false
 comment = true
 cwd = true
 cwdurl = "https://cwd.keinmal.top"
@@ -44,18 +43,24 @@ gcsdata = { repo = "hiraethecho/hiraethecho.github.io", repoid = "R_kgDOJuZ2Uw",
 LastChangeLink = "https://github.com/hiraethecho/docs/commit"
 # site components
 ShowSiteSearch = true
+SearchContent = true
 SearchPlaceHolder = "Search ↵"
 ShowTaxonomyTree = true
 ShowFileTree = true
+ShowPostsinFileTree = false    # filetree: list direct posts of each section (per-_index override)
+ShowDeeperinFileTree = true    # filetree: false = stop at this level (no subsections, no posts)
 ShowSiteNav = true
 ShowSiteInfo = true
 SiteShowCountWords = true
 SiteShowCountTerms = true
 ShowSiteLink = true
 # section components
-SectionShowCountWords = true
+ShowHeatMap = true
+ShowSectionCountWords = true
+ShowSubSection = true
 ShowList = true
 ListType = 'date'             # list date split plain
+ListRecursive = false          # false: list only direct pages; true: RegularPagesRecursive
 ListLimit = ""                # leave empty for unlimit list
 ShowCountWordsPerYear = true
 ShowCountWordsPerMonth = true
@@ -65,7 +70,7 @@ ShowPostsPerMonth = true
 ShowToc = true
 ShowRelPost = true
 HugoRelPost = true
-HugoRelPostLimit = 10
+HugoRelPostLimit = 5
 ShowForwardLinks = true
 ShowBackLinks = true
 # Home page
@@ -74,16 +79,20 @@ ShowAllPagesInHome = true
 ShowAllPagesInArchives = true
 # taxonomy page
 PostPerTermLimit = 5
+# indexes page
+ShowTaxonomyTermCount = true
+# searchoption
+fuseOpts = { limit = 5, threshold = 0.1 }
 
 [[params.links]]
 name = 'Home'
 url = 'https://keinmal.top/'
-description = ''
+description = 'Home Page'
 
 [[params.links]]
-name = 'blog'
+name = 'memex'
 url = 'https://memex.keinmal.top'
-description = 'blogs'
+description = 'posts'
 
 [[params.links]]
 name = 'math'
